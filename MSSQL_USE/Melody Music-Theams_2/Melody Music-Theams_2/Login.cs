@@ -55,7 +55,11 @@ namespace Melody_Music_Theams_2
             else if (txtUsername.Text == "User" && txtPassword.Text == "User123")
             {
                 MessageBox.Show("Valid UserName & Password");
-                Loading loading = new Loading();
+#pragma warning disable CS0246 // The type or namespace name 'Loading' could not be found (are you missing a using directive or an assembly reference?)
+#pragma warning disable CS0246 // The type or namespace name 'Loading' could not be found (are you missing a using directive or an assembly reference?)
+                Loadding loading = new Loadding();
+#pragma warning restore CS0246 // The type or namespace name 'Loading' could not be found (are you missing a using directive or an assembly reference?)
+#pragma warning restore CS0246 // The type or namespace name 'Loading' could not be found (are you missing a using directive or an assembly reference?)
                 loading.Show();
                 this.Hide();
             }

@@ -16,7 +16,9 @@ namespace Melody_Music_Theams_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+#pragma warning disable CS0246 // The type or namespace name 'Form1' could not be found (are you missing a using directive or an assembly reference?)
+            Application.Run(new Welcome());
+#pragma warning restore CS0246 // The type or namespace name 'Form1' could not be found (are you missing a using directive or an assembly reference?)
         }
     }
 }

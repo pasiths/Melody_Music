@@ -30,6 +30,7 @@ namespace Melody_Music_Theams_2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loadding));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,6 +43,10 @@ namespace Melody_Music_Theams_2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
@@ -91,10 +96,9 @@ namespace Melody_Music_Theams_2
             // 
             this.progressBar1.Location = new System.Drawing.Point(98, 731);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(23, 23);
+            this.progressBar1.Size = new System.Drawing.Size(522, 23);
             this.progressBar1.TabIndex = 13;
             this.progressBar1.Visible = false;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // picClose
             // 
@@ -114,6 +118,7 @@ namespace Melody_Music_Theams_2
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "Loadding";

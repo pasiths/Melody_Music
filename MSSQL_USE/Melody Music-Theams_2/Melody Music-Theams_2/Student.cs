@@ -171,7 +171,7 @@ namespace Melody_Music_Theams_2
 
         private void picNext_Click(object sender, EventArgs e)
         {
-            Course course = new Course();
+            Cource course = new Cource();
             this.Hide();
             course.Show();
         }
