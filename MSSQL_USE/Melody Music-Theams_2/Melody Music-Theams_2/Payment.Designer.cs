@@ -32,7 +32,6 @@ namespace Melody_Music_Theams_2
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.picBack = new System.Windows.Forms.PictureBox();
-            this.picFinish = new System.Windows.Forms.PictureBox();
             this.cboPayment = new System.Windows.Forms.ComboBox();
             this.cboRegNo = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
@@ -44,7 +43,6 @@ namespace Melody_Music_Theams_2
             this.txtCName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFinish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +51,6 @@ namespace Melody_Music_Theams_2
             this.panel1.BackgroundImage = global::Melody_Music_Theams_2.Properties.Resources.Melody_Music_Payment_Page;
             this.panel1.Controls.Add(this.txtAmount);
             this.panel1.Controls.Add(this.picBack);
-            this.panel1.Controls.Add(this.picFinish);
             this.panel1.Controls.Add(this.cboPayment);
             this.panel1.Controls.Add(this.cboRegNo);
             this.panel1.Controls.Add(this.btnExit);
@@ -90,18 +87,7 @@ namespace Melody_Music_Theams_2
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBack.TabIndex = 56;
             this.picBack.TabStop = false;
-            // 
-            // picFinish
-            // 
-            this.picFinish.BackColor = System.Drawing.Color.White;
-            this.picFinish.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picFinish.Image = global::Melody_Music_Theams_2.Properties.Resources.Arow_Right;
-            this.picFinish.Location = new System.Drawing.Point(444, 693);
-            this.picFinish.Name = "picFinish";
-            this.picFinish.Size = new System.Drawing.Size(84, 64);
-            this.picFinish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFinish.TabIndex = 55;
-            this.picFinish.TabStop = false;
+            this.picBack.Click += new System.EventHandler(this.picBack_Click);
             // 
             // cboPayment
             // 
@@ -124,6 +110,7 @@ namespace Melody_Music_Theams_2
             this.cboRegNo.Name = "cboRegNo";
             this.cboRegNo.Size = new System.Drawing.Size(264, 29);
             this.cboRegNo.TabIndex = 54;
+            this.cboRegNo.SelectedIndexChanged += new System.EventHandler(this.cboRegNo_SelectedIndexChanged);
             // 
             // btnExit
             // 
@@ -138,6 +125,7 @@ namespace Melody_Music_Theams_2
             this.btnExit.TabIndex = 52;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnClear
             // 
@@ -152,6 +140,7 @@ namespace Melody_Music_Theams_2
             this.btnClear.TabIndex = 51;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -166,6 +155,7 @@ namespace Melody_Music_Theams_2
             this.btnDelete.TabIndex = 50;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -180,6 +170,7 @@ namespace Melody_Music_Theams_2
             this.btnUpdate.TabIndex = 49;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // picClose
             // 
@@ -192,6 +183,7 @@ namespace Melody_Music_Theams_2
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picClose.TabIndex = 48;
             this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // btnAdd
             // 
@@ -206,6 +198,7 @@ namespace Melody_Music_Theams_2
             this.btnAdd.TabIndex = 47;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtCName
             // 
@@ -229,10 +222,10 @@ namespace Melody_Music_Theams_2
             this.Name = "Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment";
+            this.Load += new System.EventHandler(this.Payment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFinish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
@@ -248,7 +241,6 @@ namespace Melody_Music_Theams_2
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ComboBox cboRegNo;
         private System.Windows.Forms.ComboBox cboPayment;
-        private System.Windows.Forms.PictureBox picFinish;
         private System.Windows.Forms.PictureBox picBack;
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Panel panel1;

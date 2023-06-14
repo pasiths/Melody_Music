@@ -94,6 +94,7 @@ namespace Melody_Music_Theams_2
             this.progressBar1.Size = new System.Drawing.Size(23, 23);
             this.progressBar1.TabIndex = 13;
             this.progressBar1.Visible = false;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // picClose
             // 
@@ -118,6 +119,7 @@ namespace Melody_Music_Theams_2
             this.Name = "Loadding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
+            this.Load += new System.EventHandler(this.Loadding_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

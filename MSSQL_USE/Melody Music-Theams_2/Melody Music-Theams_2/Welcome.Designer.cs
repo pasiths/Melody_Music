@@ -29,12 +29,36 @@ namespace Melody_Music_Theams_2
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGetStart = new System.Windows.Forms.Button();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.btnGetStart = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Melody_Music_Theams_2.Properties.Resources.Melody_Music_Welcome_Page;
+            this.panel1.Controls.Add(this.picClose);
+            this.panel1.Controls.Add(this.btnGetStart);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1024, 768);
+            this.panel1.TabIndex = 0;
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(211)))), ((int)(((byte)(182)))));
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::Melody_Music_Theams_2.Properties.Resources.Close_red;
+            this.picClose.Location = new System.Drawing.Point(969, 6);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(45, 37);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picClose.TabIndex = 6;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // btnGetStart
             // 
@@ -49,29 +73,7 @@ namespace Melody_Music_Theams_2
             this.btnGetStart.TabIndex = 5;
             this.btnGetStart.Text = "Get Start";
             this.btnGetStart.UseVisualStyleBackColor = false;
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(211)))), ((int)(((byte)(182)))));
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::Melody_Music_Theams_2.Properties.Resources.Close_red;
-            this.picClose.Location = new System.Drawing.Point(969, 6);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(45, 37);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picClose.TabIndex = 6;
-            this.picClose.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Melody_Music_Theams_2.Properties.Resources.Melody_Music_Welcome_Page;
-            this.panel1.Controls.Add(this.picClose);
-            this.panel1.Controls.Add(this.btnGetStart);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 768);
-            this.panel1.TabIndex = 0;
+            this.btnGetStart.Click += new System.EventHandler(this.btnGetStart_Click);
             // 
             // Welcome
             // 
@@ -85,8 +87,8 @@ namespace Melody_Music_Theams_2
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
         }

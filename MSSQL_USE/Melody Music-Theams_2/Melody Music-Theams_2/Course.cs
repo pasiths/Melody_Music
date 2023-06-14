@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Melody_Music_Theams_2
 {
-    public partial class Payment : Form
+    public partial class Cource : Form
     {
-        public Payment()
+        public Cource()
         {
             InitializeComponent();
         }
@@ -44,11 +44,11 @@ namespace Melody_Music_Theams_2
             }
         }
 
-        private void Payment_Load(object sender, EventArgs e)
+        private void Cource_Load(object sender, EventArgs e)
         {
             string connectionString, commandString;
             connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
-            commandString = "SELECT RegNo FROM Payment";
+            commandString = "SELECT COID FROM Course";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
             SqlDataReader reader = null;
@@ -63,20 +63,17 @@ namespace Melody_Music_Theams_2
             reader = comm.ExecuteReader();
             while (reader.Read())
             {
-                cboRegNo.Items.Add(reader[0]);
+                cboCOID.Items.Add(reader[0]);
             }
             reader.Close();
             conn.Close();
-
-            cboPayment.Items.Add("Cash");
-            cboPayment.Items.Add("Credit Card");
         }
 
-        private void cboRegNo_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboCOID_SelectedIndexChanged(object sender, EventArgs e)
         {
             string connectionString, commandString;
             connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
-            commandString = "SELECT * FROM Payment WHERE RegNo='" + cboRegNo.Text + "'";
+            commandString = "SELECT * FROM Course WHERE COID='" + cboCOID.Text + "'";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
             SqlDataReader reader = null;
@@ -88,8 +85,9 @@ namespace Melody_Music_Theams_2
             while (reader.Read())
             {
                 txtCName.Text = reader[1].ToString();
-                cboPayment.Text = reader[2].ToString();
-                txtAmount.Text = reader[3].ToString();
+                txtDivision.Text = reader[2].ToString();
+                txtDuration.Text = reader[3].ToString();
+                txtFee.Text = reader[4].ToString();
 
             }
             reader.Close();
@@ -100,15 +98,15 @@ namespace Melody_Music_Theams_2
         {
             string connectionString, commandString;
             connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
-            commandString = "INSERT INTO Payment VALUES ('" + cboRegNo.Text + "','" + txtCName.Text + "','" + cboPayment.Text + "','" + txtAmount.Text + "')";
+            commandString = "INSERT INTO Course VALUES ('" + cboCOID.Text + "','" + txtCName.Text + "','" + txtDivision.Text + "','" + txtDuration.Text + "','" + txtFee.Text + "')";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
             conn.Open();
             comm.ExecuteNonQuery();
             MessageBox.Show("Record Added Succesfully");
-            cboRegNo.Items.Add(cboRegNo.Text);
+            cboCOID.Items.Add(cboCOID.Text);
             Clear();
-            cboRegNo.Focus();
+            cboCOID.Focus();
             conn.Close();
         }
 
@@ -116,7 +114,7 @@ namespace Melody_Music_Theams_2
         {
             string connectionString, commandString;
             connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
-            commandString = "UPDATE Payment SET CName = '" + txtCName.Text + "', Payment = '" + cboPayment.Text + "', Amount = '" + txtAmount.Text + "'where RegNo = '" + cboRegNo.Text + "'";
+            commandString = "UPDATE Course SET CName = '" + txtCName.Text + "', Division = '" + txtDivision.Text + "', CDuration = '" + txtDuration.Text + "',CFee='" + txtFee.Text + "' where COID = '" + cboCOID.Text + "'";
             if (MessageBox.Show("Are you sure, you want to Update this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
@@ -128,7 +126,7 @@ namespace Melody_Music_Theams_2
             comm.ExecuteNonQuery();
             MessageBox.Show("Record Updated Succesfully");
             Clear();
-            cboRegNo.Focus();
+            cboCOID.Focus();
             conn.Close();
         }
 
@@ -136,7 +134,7 @@ namespace Melody_Music_Theams_2
         {
             string connectionString, commandString;
             connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
-            commandString = "DELETE Payment FROM Payment where Payment.RegNo = '" + cboRegNo.Text + "'";
+            commandString = "DELETE Course FROM Course where Course.COID = '" + cboCOID.Text + "'";
             if (MessageBox.Show("Are you sure, you want to delete this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
@@ -147,29 +145,41 @@ namespace Melody_Music_Theams_2
             comm.ExecuteNonQuery();
             MessageBox.Show("Record Deleted Successfully");
             conn.Close();
-            cboRegNo.Items.Remove(cboRegNo.Text);
-            cboRegNo.Focus();
+            cboCOID.Items.Remove(cboCOID.Text);
+            cboCOID.Focus();
             Clear();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Clear();
+            cboCOID.Text = "";
+            txtCName.Text = "";
+            txtDivision.Text = "";
+            txtDuration.Text = "";
+            txtFee.Text = "";
         }
 
         private void picBack_Click(object sender, EventArgs e)
         {
-            Course course = new Course();
+            Student student = new Student();
             this.Hide();
-            course.Show();
+            student.Show();
+        }
+
+        private void picNext_Click(object sender, EventArgs e)
+        {
+            Payment payment = new Payment();
+            this.Hide();
+            payment.Show();
         }
 
         public void Clear()
         {
-            cboRegNo.Text = "";
+            cboCOID.Text = "";
             txtCName.Text = "";
-            cboPayment.Text = "";
-            txtAmount.Text = "";
+            txtDivision.Text = "";
+            txtDuration.Text = "";
+            txtFee.Text = "";
         }
     }
 }

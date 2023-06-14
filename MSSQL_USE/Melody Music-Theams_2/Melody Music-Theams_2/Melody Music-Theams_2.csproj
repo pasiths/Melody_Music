@@ -50,11 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cource.cs">
+    <Compile Include="Course.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cource.Designer.cs">
-      <DependentUpon>Cource.cs</DependentUpon>
+    <Compile Include="Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
     </Compile>
     <Compile Include="Loadding.cs">
       <SubType>Form</SubType>
@@ -88,8 +88,8 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cource.resx">
-      <DependentUpon>Cource.cs</DependentUpon>
+    <EmbeddedResource Include="Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loadding.resx">
       <DependentUpon>Loadding.cs</DependentUpon>
