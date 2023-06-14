@@ -117,38 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Melody Music_Lodding Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Melody Music_Lodding Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Melody Music_Student Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Melody Music_Student Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Arow Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arow Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Spinner-1s-301px (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Spinner-1s-301px (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Arow Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arow Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Melody Music_Course Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Melody Music_Course Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Melody Music_Login Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Melody Music_Login Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="95e6edd78c070cc1f4873151d30e302b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\95e6edd78c070cc1f4873151d30e302b.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Melody Music_Welcome Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Melody Music_Welcome Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Melody Music_Payment Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Melody Music_Payment Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
