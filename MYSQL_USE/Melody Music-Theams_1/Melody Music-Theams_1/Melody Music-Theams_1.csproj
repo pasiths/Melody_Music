@@ -68,6 +68,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DLL\DLLCourse.cs" />
+    <Compile Include="DLL\DLLPayment.cs" />
+    <Compile Include="DLL\DLLStudent.cs" />
     <Compile Include="UI\Course.cs">
       <SubType>Form</SubType>
     </Compile>
