@@ -1,7 +1,7 @@
 ﻿
 namespace Melody_Music_Theams_1
 {
-    partial class Login
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,10 @@ namespace Melody_Music_Theams_1
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Login";
+            this.Text = "Form1";
         }
 
         #endregion
     }
 }
+
