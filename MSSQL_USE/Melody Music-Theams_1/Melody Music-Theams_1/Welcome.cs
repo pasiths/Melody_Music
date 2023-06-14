@@ -23,5 +23,10 @@ namespace Melody_Music_Theams_1
             login.Show();
             this.Hide();
         }
+
+        private void Welcome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -99,6 +99,7 @@ namespace Melody_Music_Theams_1
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Welcome_FormClosed);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

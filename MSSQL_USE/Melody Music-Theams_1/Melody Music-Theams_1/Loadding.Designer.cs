@@ -38,6 +38,10 @@ namespace Melody_Music_Theams_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Melody_Music_Theams_1.Properties.Resources.Melody_Music_2_Lodding_Page;
@@ -77,6 +81,7 @@ namespace Melody_Music_Theams_1
             this.Name = "Loadding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
+            this.Load += new System.EventHandler(this.Loadding_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

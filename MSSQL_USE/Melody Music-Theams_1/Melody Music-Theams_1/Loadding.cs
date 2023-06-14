@@ -16,5 +16,26 @@ namespace Melody_Music_Theams_1
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            if (progressBar1.Value < 100)
+            {
+                progressBar1.Value = progressBar1.Value + 4;
+            }
+            else
+            {
+                timer1.Enabled = false;
+                Student student = new Student();
+                this.Hide();
+                student.Show();
+            }
+        }
+
+        private void Loadding_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
     }
 }

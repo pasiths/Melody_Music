@@ -89,6 +89,7 @@ namespace Melody_Music_Theams_1
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnNext
             // 
@@ -103,6 +104,7 @@ namespace Melody_Music_Theams_1
             this.btnNext.TabIndex = 23;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // cboCOID
             // 
@@ -113,6 +115,7 @@ namespace Melody_Music_Theams_1
             this.cboCOID.Name = "cboCOID";
             this.cboCOID.Size = new System.Drawing.Size(367, 29);
             this.cboCOID.TabIndex = 22;
+            this.cboCOID.SelectedIndexChanged += new System.EventHandler(this.cboCOID_SelectedIndexChanged);
             // 
             // btnExit
             // 
@@ -127,6 +130,7 @@ namespace Melody_Music_Theams_1
             this.btnExit.TabIndex = 21;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnClear
             // 
@@ -141,6 +145,7 @@ namespace Melody_Music_Theams_1
             this.btnClear.TabIndex = 20;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -155,6 +160,7 @@ namespace Melody_Music_Theams_1
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -169,6 +175,7 @@ namespace Melody_Music_Theams_1
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -183,6 +190,7 @@ namespace Melody_Music_Theams_1
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtFee
             // 
@@ -294,6 +302,8 @@ namespace Melody_Music_Theams_1
             this.Name = "Course";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Course";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Course_FormClosed);
+            this.Load += new System.EventHandler(this.Course_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
