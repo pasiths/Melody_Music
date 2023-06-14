@@ -61,6 +61,7 @@ namespace Melody_Music_Theams_1
             this.btnGetStart.TabIndex = 3;
             this.btnGetStart.Text = "Get Start";
             this.btnGetStart.UseVisualStyleBackColor = false;
+            this.btnGetStart.Click += new System.EventHandler(this.btnGetStart_Click);
             // 
             // label2
             // 

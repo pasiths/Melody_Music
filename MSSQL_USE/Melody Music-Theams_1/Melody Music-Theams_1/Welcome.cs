@@ -16,5 +16,12 @@ namespace Melody_Music_Theams_1
         {
             InitializeComponent();
         }
+
+        private void btnGetStart_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }
