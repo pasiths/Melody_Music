@@ -52,12 +52,6 @@
     <Compile Include="Course.Designer.cs">
       <DependentUpon>Course.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Loadding.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +84,18 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loadding.resx">
+      <DependentUpon>Loadding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,7 +104,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,6 +124,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melody Music_2_Login Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melody Music_2_Welcome Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melody Music_2_Lodding Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-fast.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melody Music_2_Student Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melody Music_2_Course Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melody Music_2_Payment Page.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
