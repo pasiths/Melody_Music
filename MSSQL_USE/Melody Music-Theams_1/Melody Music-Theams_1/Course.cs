@@ -21,7 +21,7 @@ namespace Melody_Music_Theams_1
         private void Course_Load(object sender, EventArgs e)
         {
             string connectionString, commandString;
-            connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
+            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "SELECT COID FROM Course";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -46,7 +46,7 @@ namespace Melody_Music_Theams_1
         private void cboCOID_SelectedIndexChanged(object sender, EventArgs e)
         {
             string connectionString, commandString;
-            connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
+            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "SELECT * FROM Course WHERE COID='" + cboCOID.Text + "'";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -71,7 +71,7 @@ namespace Melody_Music_Theams_1
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string connectionString, commandString;
-            connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
+            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "INSERT INTO Course VALUES ('" + cboCOID.Text + "','" + txtCName.Text + "','" + txtDivision.Text + "','" + txtDuration.Text + "','" + txtFee.Text + "')";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -87,7 +87,7 @@ namespace Melody_Music_Theams_1
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string connectionString, commandString;
-            connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
+            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "UPDATE Course SET CName = '" + txtCName.Text + "', Division = '" + txtDivision.Text + "', CDuration = '" + txtDuration.Text + "',CFee='" + txtFee.Text + "' where COID = '" + cboCOID.Text + "'";
             if (MessageBox.Show("Are you sure, you want to Update this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
@@ -107,7 +107,7 @@ namespace Melody_Music_Theams_1
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string connectionString, commandString;
-            connectionString = "Data Source=DESKTOP-68QNKBQ\\SQL;Initial Catalog=MelodyMusic;Integrated Security=True";
+            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "DELETE Course FROM Course where Course.COID = '" + cboCOID.Text + "'";
             if (MessageBox.Show("Are you sure, you want to delete this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
