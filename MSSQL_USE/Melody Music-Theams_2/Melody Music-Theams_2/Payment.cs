@@ -18,6 +18,10 @@ namespace Melody_Music_Theams_2
             InitializeComponent();
         }
 
+        string commandString;
+        string connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=sa;Password=Pasith2002";
+
+
         private void picClose_Click(object sender, EventArgs e)
         {
             DialogResult dl;
@@ -46,8 +50,8 @@ namespace Melody_Music_Theams_2
 
         private void Payment_Load(object sender, EventArgs e)
         {
-            string connectionString, commandString;
-            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
+            //string connectionString, commandString;
+            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "SELECT RegNo FROM Payment";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -74,8 +78,8 @@ namespace Melody_Music_Theams_2
 
         private void cboRegNo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connectionString, commandString;
-            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
+           // string connectionString, commandString;
+            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "SELECT * FROM Payment WHERE RegNo='" + cboRegNo.Text + "'";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -98,8 +102,8 @@ namespace Melody_Music_Theams_2
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string connectionString, commandString;
-            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
+            //string connectionString, commandString;
+            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "INSERT INTO Payment VALUES ('" + cboRegNo.Text + "','" + txtCName.Text + "','" + cboPayment.Text + "','" + txtAmount.Text + "')";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -114,8 +118,8 @@ namespace Melody_Music_Theams_2
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string connectionString, commandString;
-            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
+            //string connectionString, commandString;
+            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "UPDATE Payment SET CName = '" + txtCName.Text + "', Payment = '" + cboPayment.Text + "', Amount = '" + txtAmount.Text + "'where RegNo = '" + cboRegNo.Text + "'";
             if (MessageBox.Show("Are you sure, you want to Update this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
@@ -134,8 +138,8 @@ namespace Melody_Music_Theams_2
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string connectionString, commandString;
-            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
+            //string connectionString, commandString;
+            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "DELETE Payment FROM Payment where Payment.RegNo = '" + cboRegNo.Text + "'";
             if (MessageBox.Show("Are you sure, you want to delete this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
