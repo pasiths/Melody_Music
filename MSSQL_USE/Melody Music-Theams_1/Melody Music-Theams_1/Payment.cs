@@ -104,6 +104,8 @@ namespace Melody_Music_Theams_1
         private void btnDelete_Click(object sender, EventArgs e)
         {
             commandString = "DELETE Payment FROM Payment where Payment.RegNo = '" + cboRegNo.Text + "'";
+            connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=sa;Password=***********";
+            commandString = "DELETE Payment FROM Payment where Payment.RegNo = '" + cboRegNo.Text + "'";
             if (MessageBox.Show("Are you sure, you want to delete this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
