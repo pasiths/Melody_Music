@@ -49,8 +49,6 @@ namespace Melody_Music_Theams_2
 
         private void Student_Load(object sender, EventArgs e)
         {
-            //string connectionString, commandString;
-            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "SELECT RegNo FROM Student";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -74,8 +72,6 @@ namespace Melody_Music_Theams_2
 
         private void cboRegNo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //string connectionString, commandString;
-            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "SELECT * FROM Student WHERE RegNo='" + cboRegNo.Text + "'";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -100,8 +96,6 @@ namespace Melody_Music_Theams_2
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //string connectionString, commandString;
-            //connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "INSERT INTO Student VALUES ('" + cboRegNo.Text + "','" + txtFName.Text + "','" + txtLName.Text + "','" + txtAddress.Text + "','" + dtpDOB.Text + "','" + txtContact.Text + "','" + txtAge.Text + "')";
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);
@@ -116,8 +110,6 @@ namespace Melody_Music_Theams_2
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            ///string connectionString, commandString;
-            ///connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "UPDATE Student SET FName = '" + txtFName.Text + "', LName = '" + txtLName.Text + "', Address = '" + txtAddress.Text + "', DOB = '" + dtpDOB.Text + "', Contact = '" + txtContact.Text + "',Age='" + txtAge.Text + "' where RegNo = '" + cboRegNo.Text + "'";
             if (MessageBox.Show("Are you sure, you want to Update this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
@@ -136,8 +128,6 @@ namespace Melody_Music_Theams_2
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ///string connectionString, commandString;
-            ///connectionString = "Data Source=192.168.43.223;Initial Catalog=MelodyMusic;User ID=pasiya;Password=***********";
             commandString = "DELETE Student FROM Student where Student.RegNo = '" + cboRegNo.Text + "'";
             if (MessageBox.Show("Are you sure, you want to delete this record ? ", "Sure ? ", MessageBoxButtons.YesNo) == DialogResult.No)
             {
